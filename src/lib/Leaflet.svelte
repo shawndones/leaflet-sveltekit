@@ -2,7 +2,6 @@
 	import { onMount, onDestroy, setContext, createEventDispatcher, tick } from 'svelte';
 	import L from 'leaflet';
 	import 'leaflet/dist/leaflet.css';
-  import MapInfo from '$lib/MapInfo.svelte'; 
 	export let bounds: L.LatLngBoundsExpression | undefined = undefined;
 	export let view: L.LatLngExpression | undefined = undefined;
 	export let zoom: number | undefined = undefined;
@@ -57,7 +56,7 @@
 
 <div class="w-full h-full" bind:this={mapElement}>
 	{#if map}
-  <MapInfo />
+
 		<slot />
 	{/if}
 </div>

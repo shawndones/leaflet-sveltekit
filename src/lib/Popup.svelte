@@ -7,6 +7,7 @@
 
 	let open = false;
 
+		
 	const { getLayer }: { getLayer: () => L.Layer | undefined } = getContext('layer');
 	const layer = getLayer();
 

@@ -12,6 +12,7 @@
 	const { getMap }: { getMap: () => L.Map | undefined } = getContext('map');
 	const map = getMap();
 
+	// L.Marker inherits from L.Layer
 	setContext('layer', {
 		// L.Marker inherits from L.Layer
 		getLayer: () => marker

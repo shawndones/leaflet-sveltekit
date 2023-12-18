@@ -2,13 +2,13 @@
 	import '../app.css';
 	import type { LatLngExpression } from 'leaflet';
 	import Leaflet from '$lib/Leaflet.svelte';
+  import MapInfo from '$lib/MapInfo.svelte'; 
 	import Marker from '$lib/Marker.svelte';
 	import Popup from '$lib/Popup.svelte';
- 
 
-	const initialView: LatLngExpression = [51.514244, 7.468429]; // Dortmund, Germany
+	const initialView: LatLngExpression = [41.3161, -110.3837]; // Fort Bridger
 	const markerLocations: Array<LatLngExpression> = [
-		[51.513870009926, 7.473969975241] // ShipBit Office
+		[41.317951, -110.38971] // Jim Bridger Rondezvous
 	];
 </script>
 
@@ -21,6 +21,6 @@
 				>
 			</Marker>
 		{/each}
-    
+		<MapInfo initialView={initialView} />
 	</Leaflet>
 </div>
